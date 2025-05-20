@@ -55,6 +55,21 @@ const post = {
   title: "Post",
   fields: [
     {
+      name: "customId",
+      title: "Custom ID (URL ID)",
+      type: "slug",
+      options: {
+        source: (doc) => doc.title.en,
+        slugify: (input) =>
+          input
+            .toLowerCase()
+            .replace(/\s+/g, "-")
+            .replace(/[^a-z0-9-]/g, "")
+            .slice(0, 96),
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: "title",
       type: "object",
       title: "Title",
