@@ -95,6 +95,19 @@ const post = {
       title: "Main Image",
       options: { hotspot: true },
     },
+    {
+      name: "category",
+      title: "Категорія",
+      type: "string",
+      options: {
+        list: [
+          { title: "Веб-розробка", value: "web" },
+          { title: "Відеопродакшн", value: "video" },
+        ],
+        layout: "radio",
+      },
+      validation: (Rule) => Rule.required(),
+    },
   ],
 
   preview: {
