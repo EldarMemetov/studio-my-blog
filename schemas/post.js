@@ -89,17 +89,16 @@ const post = {
     {
       name: "author",
       title: "Author",
-      type: "object",
-      fields: [
-        { name: "firstName", type: "string", title: "First Name" },
-        {
-          name: "publishedAt",
-          type: "date",
-          title: "Published Date",
-          options: { dateFormat: "DD.MM.YYYY" },
-        },
-      ],
+      type: "string",
     },
+
+    {
+      name: "publishedAt",
+      type: "date",
+      title: "Published Date",
+      options: { dateFormat: "DD.MM.YYYY" },
+    },
+
     {
       name: "body",
       type: "object",
