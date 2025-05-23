@@ -80,6 +80,27 @@ const post = {
       ],
     },
     {
+      name: "mainImage",
+      type: "image",
+      title: "Main Image",
+      options: { hotspot: true },
+    },
+
+    {
+      name: "author",
+      title: "Author",
+      type: "object",
+      fields: [
+        { name: "firstName", type: "string", title: "First Name" },
+        {
+          name: "publishedAt",
+          type: "date",
+          title: "Published Date",
+          options: { dateFormat: "DD.MM.YYYY" },
+        },
+      ],
+    },
+    {
       name: "body",
       type: "object",
       title: "Body",
@@ -88,12 +109,6 @@ const post = {
         { name: "en", title: "English", ...localizedBody },
         { name: "de", title: "German", ...localizedBody },
       ],
-    },
-    {
-      name: "mainImage",
-      type: "image",
-      title: "Main Image",
-      options: { hotspot: true },
     },
     {
       name: "category",
